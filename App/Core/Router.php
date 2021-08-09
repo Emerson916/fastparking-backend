@@ -26,7 +26,7 @@ class Router
         //recuperar a url que está sendo 
         $url = $this->parseURL();
 
-        if (isset($url[1]) && file_exists("../App/Controller/" . $url[1] . ".php")) {
+        if (isset($url[1]) && file_exists("../App/Controller/" . ucfirst($url[1]) . ".php")) {
             $this->controller = $url[1];
             unset($url[1]);
         } else {
