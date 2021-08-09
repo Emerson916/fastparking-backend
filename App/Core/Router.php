@@ -36,7 +36,7 @@ class Router
         }
 
         //importamos o controlelr
-        require_once "../App/Controller/" . $this->controller . ".php";
+        require_once "../App/Controller/" . ucfirst($this->controller) . ".php";
 
         //onstancia do controller
         $this->controller = new $this->controller;
